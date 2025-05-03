@@ -1,0 +1,50 @@
+name: Kevent
+version: '1.0'
+main: org.event.Kevent.Kevent
+api-version: '1.21'
+authors: [ Kernel-zToonSiamz ]
+description: squidgame-Event
+commands:
+  toggleDetection:
+    description: Toggle the player movement detection.
+    usage: /<command>
+  removeRegion:
+    description: Remove the player-defined region.
+    usage: /<command>
+  usermanage:
+    description: Open the user manage GUI
+    usage: /<command>
+    permission: usermanage.open
+  gettoggleitem:
+    description: รับไอเทมสำหรับเปิด/ปิดการตรวจสอบ
+    usage: /gettoggleitem
+    permission: kevent.toggle
+  regionstick:
+    description: รับไม้กำหนดพื้นที่สำหรับใช้กำหนดพื้นที่ในปลั๊กอิน
+    usage: /<command>
+    permission: kevent.regionstick
+
+
+
+usermanage.open:
+  description: Permission to open the GUI
+  default: false
+usermanage.kill:
+  description: Permission to kill players
+  default: false
+usermanage.tphere:
+  description: Permission to teleport players to you
+  default: false
+usermanage.tp:
+  description: Permission to teleport yourself to players
+  default: false
+
+
+kevent.regionstick:
+  description: อนุญาตให้ใช้คำสั่ง /regionstick
+  default: false
+  kevent.admin:
+    description: สิทธิ์สำหรับแอดมินของปลั๊กอิน Kevent
+    default: false
+    children:
+      kevent.regionstick: true
