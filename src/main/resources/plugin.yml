@@ -6,7 +6,7 @@ authors: [ Kernel-zToonSiamz ]
 description: squidgame-Event
 commands:
   toggleDetection:
-    description: Toggle the player movement detection.
+    description: Toggle the player movement detection...
     usage: /<command>
   removeRegion:
     description: Remove the player-defined region.
@@ -16,7 +16,7 @@ commands:
     usage: /<command>
     permission: usermanage.open
   gettoggleitem:
-    description: รับไอเทมสำหรับเปิด/ปิดการตรวจสอบ
+    description: รับไอเทมสำหรับเปิด/ปิดการตรวจสอบ.
     usage: /gettoggleitem
     permission: kevent.toggle
   regionstick:
